@@ -482,8 +482,7 @@ redis列表:
 
      1. 执行过程是原子性
      2. 传输数据之间在源Redis和目标Redis上产生
-     3. 目标Redis完成restore 后会发送OK给源Redis，源Redis接收后会根据migrate对应的选项来决定是否 在源Redis上删除对应的键。
-
+     3. 目标Redis完成restore 后会发送OK给源Redis，源Redis接收后会根据migrate对应的选项来决定是否 在源Redis上删除对应的
 
 
 
