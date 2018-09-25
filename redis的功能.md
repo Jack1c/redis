@@ -137,6 +137,22 @@ redis-benchmark会对各类数据结构的命令进行测试.
 
 ## Pipeline
 
+pipeline(流水线)机制: 将一组Redis命令进行组装,通过一次RTT传输给Redis,Redis执行完这些命令后将执行的结果按照顺序返回给客户端.
+
+> Round Trip Time 返还时间 简写 :RTT
+
+
+
+原生批量执行和Pipline执行的对比:
+
++ 原生批量执行具有原子性
++ 原型批量命令是一个命令对应多个key Pipeline 支持多个命令
++ 原生批量执行是Redis服务端支持实现的. 而pipeline 需要服务端和客户端共同完成
+
+
+
+## 事务与Lua
+
 
 
 
