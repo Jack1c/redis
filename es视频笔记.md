@@ -708,6 +708,41 @@ def search_15_2():
 
 
 
+## 使用copy_to定制组合field解决corss-fields 搜索弊端
+
+
+
+### 用copy_to，将多个field组合成一个field
+
+添加字段mapping :
+
+```
+PUT /forum/_mapping/article
+{
+  "properties": {
+      "new_author_first_name": {
+          "type":     "string",
+          "copy_to":  "new_author_full_name" 
+      },
+      "new_author_last_name": {
+          "type":     "string",
+          "copy_to":  "new_author_full_name" 
+      },
+      "new_author_full_name": {
+          "type":     "string"
+      }
+  }
+}
+```
+
+添加字段:
+
+
+
+
+
+
+
 
 
 
